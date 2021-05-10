@@ -14,7 +14,7 @@ export default class NytResults extends React.Component<NytProps, {}> {
 
         return(
             <div>
-                {this.props.results.map(result => {
+                {this.props.results.map((result: { id: React.Key | null | undefined; headline: { main: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined; }; multimedia: string | any[]; snippet: string | number | boolean | {} | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactNodeArray | React.ReactPortal | null | undefined; keywords: any[]; web_url: string | undefined; }) => {
                     return(
                         <div key={result.id}>
                             <h3>{result.headline.main}</h3>
@@ -34,7 +34,7 @@ export default class NytResults extends React.Component<NytProps, {}> {
                                 </div>
                         </div>
                     )
-                })}.
+                })}
                 
             </div>
         );
