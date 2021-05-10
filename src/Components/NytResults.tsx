@@ -2,8 +2,8 @@ import React from 'react';
 
 
 type NytProps = {
-changePage: (event: any, direction: string) => any;
-results: any
+    results: any
+    changePage: (event: any, direction: string) => any;
 }
 
 

@@ -1,7 +1,9 @@
 import React from 'react';
 import NytResults from './NytResults'
 
-
+type NytProps = {
+    
+}
 
 type NytState = {
 
@@ -16,7 +18,7 @@ type NytState = {
 }
 
 
-export default class Nyt extends React.Component<{}, NytState> {
+export default class Nyt extends React.Component<NytProps, NytState> {
     constructor(props: {}){
 
         super(props)
