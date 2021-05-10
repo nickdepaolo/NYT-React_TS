@@ -3,7 +3,7 @@ import React from 'react';
 
 type NytProps = {
     results: any
-    changePage: (event: any, direction: string) => any;
+    changePage: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, direction: string) => any;
 }
 
 

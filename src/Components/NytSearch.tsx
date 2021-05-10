@@ -11,7 +11,7 @@ type NytState = {
     startDate: string;
     endDate: string;
     pageNumber: number;
-    results: Array<any>;
+    results: any;
     url: string;
     key: string;
    
@@ -55,7 +55,7 @@ export default class Nyt extends React.Component<NytProps, NytState> {
         this.fetchResults();
     }
 
-    changePageNumber = (event: Event, direction: string) => {
+    changePageNumber = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, direction: string) => {
         event.preventDefault()
         if (direction === 'down') {
             if (this.state.pageNumber > 0) {
@@ -76,7 +76,7 @@ export default class Nyt extends React.Component<NytProps, NytState> {
 
             <div className='main'>
             <div className='mainDiv'>
-                <form onSubmit={(e) => this.handleSubmit(e) }>
+                <form onSubmit={() => this.handleSubmit }>
                     <span>Enter a single search term (required) :</span>
                     <input type='text' name='search' onChange={(e) => this.setState({search: e.target.value})}/>
                     <br/>
