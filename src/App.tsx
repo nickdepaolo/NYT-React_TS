@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Nyt from './Components/NytSearch'
 
-function App() {
+const App: React.FunctionComponent = () => {
   return (
     <div className="App">
       <h1>555 timer</h1>
