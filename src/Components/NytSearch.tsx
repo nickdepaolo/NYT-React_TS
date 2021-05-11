@@ -44,7 +44,7 @@ export default class Nyt extends React.Component<NytProps, NytState> {
         url = this.state.endDate ? url + `end_date=${this.state.endDate}` : url;
         console.log(this.state.url);
         
-        fetch('https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=rpEYJfLGzALSgM3tA39gyHAmJ9fuXSfT&page=1&q=cat')
+        fetch(url)
         .then(res => res.json())
         .then(data => this.setState({results: data.response.docs}))
         .catch(err => console.log(err));
